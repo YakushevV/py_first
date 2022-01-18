@@ -1,13 +1,21 @@
-action = input("Что делаем? (+, -): ")
-a = float(input("Введи первое число: "))
-b = float(input("Введи второе число: "))
+what = input("Выбери операцию '+' '-' '*' '/': ")
+a = int(input("Введи первое число: "))
+b = int(input("Введи второе число: "))
 
-if action == "+":
+if what == "+":
     c = a + b
-    print("Результат: " + str(c))
-elif action == "-":
+    print("Равно: " + str(c))
+elif what == "-":
     c = a - b
-    print("Результат: " + str(c))
+    print("Равно: " + str(c))
+elif what == "*":
+    c = a * b
+    print("Равно: " + str(c))
+elif what == "/":
+    if b == int("0"):
+        print("Не делю на 0")
+        exit()
+    c = a / b
+    print("Равно: " + str(c))
 else:
-    print("Неверная операция")
-
+    print("Такого я не умею")
